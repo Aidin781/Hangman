@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView lettersView;
     private EditText guessView;
     private Button submitButton;
-    private hangManController hangManController;
-    private hangManView hangManView;
-    private hangManModel hangManModel;
+    private HangManController hangManController;
+    private HangManView hangManView;
+    private HangManModel hangManModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         hangManController.acceptGuess(guessView.getText().toString());
         hangManView.update(hangManModel);
         gallowsView.setText(hangManView.getGallow());
-        wordView.setText(hangManView.getWord());
+        wordView.setText(hangManView.getRiddle());
         lettersView.setText(hangManView.getLetters());
 
     }
